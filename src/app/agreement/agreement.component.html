@@ -1,0 +1,40 @@
+<div class="mui--text-dark-secondary mui--text-body2" name="agreement">
+  {{ title }}
+</div>
+<div class="mui-divider"></div>
+<br />
+<br />
+<div>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis aliquam
+  ipsum sed dignissim. Sed ac accumsan odio. Vivamus tristique dignissim neque.
+  Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc cursus
+  felis nec purus condimentum vestibulum. Donec mauris nisi, sollicitudin eget
+  iaculis id, suscipit id odio.
+  <a href="#">Read more...</a>
+</div>
+<ul class="mui-tabs__bar mui-tabs__bar--justified">
+  <!-- <li class="mui--is-active">
+    <a data-mui-toggle="tab" data-mui-controls="pane-default-4">4</a>
+  </li> -->
+  <li *ngFor="let agr of argeements" [class]="agr.active">
+    <a
+      data-mui-toggle="tab"
+      [attr.data-mui-controls]="'pane-justified-' + agr.title"
+      >{{ agr.tabName }}</a
+    >
+  </li>
+</ul>
+<div
+  *ngFor="let agrp of argeements"
+  class="mui-tabs__pane agreement"
+  [attr.id]="'pane-justified-' + agrp.title"
+  [class]="agrp.active"
+>
+  <div class="mui--text-title mui--text-center mui--text-justify">
+    <button class="mui-btn mui-btn--raised mui-btn--primary">Принять</button
+    ><span> {{ agrp.title }}</span>
+  </div>
+
+  <p [innerHTML]="agrp.text"></p>
+</div>
+<br />

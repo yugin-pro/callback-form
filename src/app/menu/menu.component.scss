@@ -1,0 +1,11 @@
+li {
+  margin: 1rem 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  color: #ccc;
+
+  &:hover {
+    text-overflow: ellipsis;
+    color: rgb(255, 255, 255);
+  }
+}

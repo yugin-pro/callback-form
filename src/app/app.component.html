@@ -4,11 +4,8 @@
   </div>
   <br />
   <br />
-  <div>
-    <ul class="mui-list--unstyled">
-      <li class="mui--text-light"  *ngFor="let element of menu"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i><span> {{ element }}</span></li>
-    </ul>
-  </div>
+  <!-- Menu posts go here -->
+  <app-menu></app-menu>
 </div>
 <div id="content" class="mui-container-fluid">
   <!-- blog posts go here -->
@@ -16,44 +13,21 @@
     <div class="mui-col-sm-10 mui-col-sm-offset-1">
       <br />
       <br />
-      <div class="mui--text-dark-secondary mui--text-body2">PINNED POST</div>
-      <div class="mui-divider"></div>
+      <app-contact></app-contact>
       <br />
       <br />
-      <!-- blog goes here -->
       <app-callback></app-callback>
       <br />
       <br />
-      <div class="mui--text-dark-secondary mui--text-body2">RECENT POSTS</div>
-      <div class="mui-divider"></div>
+      <!-- <app-suggest></app-suggest>
       <br />
-      <!-- blog goes here -->
-      <div class="mui--text-headline">MUI Acquires New Features</div>
-      <div class="mui--text-dark-secondary">
-        By <a href="#">Team MUI</a> 3 days ago
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis
-        aliquam ipsum sed dignissim. Sed ac accumsan odio. Vivamus tristique
-        dignissim neque. Interdum et malesuada fames ac ante ipsum primis in
-        faucibus. Nunc cursus felis nec purus condimentum vestibulum. Donec
-        mauris nisi, sollicitudin eget iaculis id, suscipit id odio.
-        <a href="#">Read more...</a>
-      </div>
+      <br />   -->
+      <app-agreement></app-agreement>
       <br />
-      <!-- blog goes here -->
-      <div class="mui--text-headline">MUI Acquires New Features</div>
-      <div class="mui--text-dark-secondary">
-        By <a href="#">Team MUI</a> 3 days ago
-      </div>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis
-        aliquam ipsum sed dignissim. Sed ac accumsan odio. Vivamus tristique
-        dignissim neque. Interdum et malesuada fames ac ante ipsum primis in
-        faucibus. Nunc cursus felis nec purus condimentum vestibulum. Donec
-        mauris nisi, sollicitudin eget iaculis id, suscipit id odio.
-        <a href="#">Read more...</a>
-      </div>
+      <br />
+      <!-- <app-faq></app-faq>
+      <br />
+      <br /> -->
     </div>
   </div>
 </div>

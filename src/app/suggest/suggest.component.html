@@ -1,0 +1,89 @@
+<div class="mui--text-dark-secondary mui--text-body2">{{ title }}</div>
+<div class="mui-divider"></div>
+<br />
+<br />
+<div>
+  Все предложения регистрируются и рассматриваются без исключения. Срок
+  рассмотрения не менее 7 рабочих дней. Предложения мошеннического характера или
+  предложения с нарушениями законодальства автоматически отправляются в
+  соответсвующие органы. Предложения можно направлять на почту
+  <a href="mailto:yugin.pro@gmail.com">yugin.pro@gmail.com </a>
+</div>
+<br />
+<div class="mui-panel">
+  <form class="mui-form">
+    <ul class="mui-tabs__bar">
+      <li class="mui--is-active">
+        <a data-mui-toggle="tab" data-mui-controls="pane-default-1"
+          >Юридическое лицо</a
+        >
+      </li>
+      <li>
+        <a data-mui-toggle="tab" data-mui-controls="pane-default-2"
+          >Физическое лицо</a
+        >
+      </li>
+      <li>
+        <a data-mui-toggle="tab" data-mui-controls="pane-default-3"
+          >Отправить файл</a
+        >
+      </li>
+    </ul>
+    <br />
+    <div class="mui-tabs__pane mui--is-active" id="pane-default-1">
+      <div class="mui-textfield">
+        <input type="text" required />
+        <label>ИНН, ОГРН, ОГРНИП</label>
+      </div>
+      <div class="mui-textfield">
+        <input type="text" required />
+        <label>Сайт организации</label>
+      </div>
+    </div>
+    <div class="mui-tabs__pane" id="pane-default-2">
+      <div class="mui-textfield">
+        <input type="text" required />
+        <label>ИНН</label>
+      </div>
+    </div>
+    <div class="mui-tabs__pane" id="pane-default-3">
+      <div class="mui-textfield">
+        <input type="file" mui-btn mui-btn--raised />
+      </div>
+    </div>
+    <br />
+    <div class="mui--text-subhead">Текст предложения</div>
+    <br />
+    <div
+      class="mui-textfield mui-textfield--float-label"
+      style="border: 1px solid #ccc; padding: 10px"
+    >
+      <textarea required></textarea>
+      <label>Required Textarea</label>
+    </div>
+
+    <br />
+    <div class="mui--text-subhead">Контактное лицо</div>
+    <br />
+    <div class="mui-textfield">
+      <input type="text" required />
+      <label>ФИО</label>
+    </div>
+    <div class="mui-textfield mui-textfield--float-label">
+      <input type="email" required />
+      <label>Email</label>
+    </div>
+    <div class="mui-textfield mui-textfield--float-label">
+      <input type="email" required />
+      <label>Телефон</label>
+    </div>
+    <div class="mui-checkbox">
+      <label>
+        <input type="checkbox" value="" checked />
+        Принимаю <a href="#agreement">условия конфиденциальности</a>
+      </label>
+    </div>
+    <button type="submit" class="mui-btn mui-btn--raised">Submit</button>
+  </form>
+</div>
+<!-- form end -->
