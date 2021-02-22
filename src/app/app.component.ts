@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Контакт центр';
+  menu = {
+    contact: true,
+    callback: true,
+    agreement: true,
+    faq: false,
+    suggest: false,
+  };
 
   constructor() {}
 

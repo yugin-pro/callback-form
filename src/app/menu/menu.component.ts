@@ -6,20 +6,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  menu: Array<string>;
+  menu: Array<any>;
+  selectedMenuName: '';
 
   constructor() {}
 
   ngOnInit(): void {
     this.getMenu();
   }
+
   getMenu() {
     this.menu = [
-      'Kонтакты',
-      'Обратная связь',
-      //'Предложения',
-      'Конфиденциальность',
-      //'FAQ',
+      { name: 'Kонтакты', show: true },
+      { name: 'Обратная связь', show: true },
+      { name: 'Предложения', show: false },
+      { name: 'Конфиденциальность', show: true },
+      { name: 'FAQ', show: false },
     ];
+  }
+
+  selectedMenu(element: any) {
+    /*Обрабатываем клик по меню
+    Подсвечиваем выбранное
+    Скрываем остальные компоненты*/
+    this.selectedMenuName = element.name;
+
+    console.log(`Selected element: ${element}`);
   }
 }

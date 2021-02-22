@@ -1,6 +1,6 @@
 <div id="sidebar">
   <div class="mui--text-light mui--text-display1 mui--align-vertical">
-    {{ title }}
+    {{ title }} <a href="/"> </a>
   </div>
   <br />
   <br />
@@ -13,21 +13,21 @@
     <div class="mui-col-sm-10 mui-col-sm-offset-1">
       <br />
       <br />
-      <app-contact></app-contact>
+      <app-contact *ngIf="menu.contact"></app-contact>
       <br />
       <br />
-      <app-callback></app-callback>
+      <app-callback *ngIf="menu.callback"></app-callback>
       <br />
       <br />
-      <!-- <app-suggest></app-suggest>
-      <br />
-      <br />   -->
-      <app-agreement></app-agreement>
+      <app-suggest *ngIf="menu.suggest"></app-suggest>
       <br />
       <br />
-      <!-- <app-faq></app-faq>
+      <app-agreement *ngIf="menu.agreement"></app-agreement>
       <br />
-      <br /> -->
+      <br />
+      <app-faq *ngIf="menu.faq"></app-faq>
+      <br />
+      <br />
     </div>
   </div>
 </div>
