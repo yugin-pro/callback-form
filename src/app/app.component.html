@@ -1,11 +1,11 @@
 <div id="sidebar">
   <div class="mui--text-light mui--text-display1 mui--align-vertical">
-    {{ title }} <a href="/"> </a>
+    <a href="/">{{ title }}</a>
   </div>
   <br />
   <br />
   <!-- Menu posts go here -->
-  <app-menu></app-menu>
+  <app-menu (selectedComponent)="shownComponent = $event"></app-menu> 
 </div>
 <div id="content" class="mui-container-fluid">
   <!-- blog posts go here -->
@@ -13,21 +13,11 @@
     <div class="mui-col-sm-10 mui-col-sm-offset-1">
       <br />
       <br />
-      <app-contact *ngIf="menu.contact"></app-contact>
-      <br />
-      <br />
-      <app-callback *ngIf="menu.callback"></app-callback>
-      <br />
-      <br />
-      <app-suggest *ngIf="menu.suggest"></app-suggest>
-      <br />
-      <br />
-      <app-agreement *ngIf="menu.agreement"></app-agreement>
-      <br />
-      <br />
-      <app-faq *ngIf="menu.faq"></app-faq>
-      <br />
-      <br />
+      <app-contact *ngIf="shownComponent.contact"></app-contact>
+      <app-callback *ngIf="shownComponent.callback"></app-callback>
+      <app-suggest *ngIf="shownComponent.suggest"></app-suggest>
+      <app-agreement *ngIf="shownComponent.agreement"></app-agreement>
+      <app-faq *ngIf="shownComponent.faq"></app-faq>
     </div>
   </div>
 </div>

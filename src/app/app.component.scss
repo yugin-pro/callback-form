@@ -22,6 +22,11 @@ button {
 #sidebar {
   background-color: #005a73;
   padding: 15px;
+
+  .mui--text-display1 a{
+    text-decoration: none;
+    color: white;
+  }
 }
 
 @media (min-width: 768px) {
