@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CallbackComponent } from './callback/callback.component';
@@ -8,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AgreementComponent } from './agreement/agreement.component';
 import { SuggestComponent } from './suggest/suggest.component';
 import { FaqComponent } from './faq/faq.component';
+import { IssuesService } from './common/issues.service'
 
 @NgModule({
   declarations: [
@@ -20,9 +23,11 @@ import { FaqComponent } from './faq/faq.component';
     FaqComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [IssuesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

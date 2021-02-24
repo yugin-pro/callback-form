@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "ypro-callback-form"
+  },
+  "targets": {
+    "ypro-callback-form": {
+      "hosting": {
+        "contact-form": [
+          "ypro-callback-form"
+        ]
+      }
+    }
   }
 }
